@@ -12,8 +12,10 @@ import {
 import Icon from "../ui/Icon/Icon";
 import { Spotify } from "@styled-icons/remix-fill/Spotify";
 import { useState, useEffect } from "react";
+import useSWR from "swr";
 
 const NowPlaying = () => {
+	const [nowPlayingInitialized, setNowPlayingInitialized] = useState(false);
 	const [nowPlaying, setNowPlaying] = useState({
 		status: -1,
 		album: "",
@@ -25,10 +27,8 @@ const NowPlaying = () => {
 	});
 
 	const getNowPlaying = async () => {
-		return await axios({
-			url: "https://ayushm.dev/api/spotify",
-			method: "GET"
-		});
+		const { data } = useSWR("/api/spotify", fetcher);
+		return data;
 	};
 
 	useEffect(() => {
@@ -36,6 +36,7 @@ const NowPlaying = () => {
 			const result = await getNowPlaying();
 
 			setNowPlaying(result.data);
+			setNowPlayingInitialized(true);
 		};
 
 		fetchNowPlaying();
@@ -43,7 +44,7 @@ const NowPlaying = () => {
 
 	const handleImage = (e) => e.preventDefault();
 
-	if (nowPlaying.status == -1) return <Spinner size="small" />;
+	if (!nowPlayingInitialized) return <Spinner size="small" />;
 	else
 		return (
 			<>
