@@ -1,5 +1,6 @@
 import axios from "axios";
 import querystring from "querystring";
+import { NextApiResponse, NextApiRequest } from "next";
 
 const {
 	SPOTIFY_CLIENT_ID: client_id,
@@ -25,11 +26,11 @@ const getAccessToken = async () => {
 		})
 	});
 
-	// console.log(response.data);
+	console.log(response.data);
 	return response.data;
 };
 
-export default async (_, res) => {
+export default async (_req: NextApiRequest, res: NextApiResponse) => {
 	const { access_token } = await getAccessToken();
 	const response = await fetch(NOW_PLAYING_ENDPOINT, {
 		headers: {
@@ -44,7 +45,7 @@ export default async (_, res) => {
 	}
 
 	const song = await response.json();
-	// console.log(song);
+	console.log(song);
 
 	const isPlaying = song.is_playing;
 	const title = song.item.name;
