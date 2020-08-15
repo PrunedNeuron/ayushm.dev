@@ -26,7 +26,7 @@ const NowPlaying = () => {
 
 	const getNowPlaying = async () => {
 		return await axios({
-			url: "http://localhost:3000/spotify",
+			url: "https://ayushm.dev/api/spotify",
 			method: "GET"
 		});
 	};
