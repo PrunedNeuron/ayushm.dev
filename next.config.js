@@ -19,6 +19,8 @@ const mdx = require("next-mdx-enhanced")({
 	}
 });
 
-const nextConfig = { pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"] };
+const nextConfig = {
+	pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"]
+};
 
 module.exports = withPlugins([mdx], nextConfig);

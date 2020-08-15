@@ -73,7 +73,6 @@ export default function BlogPosts() {
 									</Tooltip>
 								</Dot>
 								<Badges style={{ float: "right" }}>
-									{console.log(page.tags)}
 									{getTags(page.tags).map((badge) => (
 										<Badge
 											key={getId(page)}

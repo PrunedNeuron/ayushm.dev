@@ -26,7 +26,7 @@ const getAccessToken = async () => {
 		})
 	});
 
-	console.log(response.data);
+	// console.log(response.data);
 	return response.data;
 };
 
@@ -45,7 +45,7 @@ export default async (_req: NextApiRequest, res: NextApiResponse) => {
 	}
 
 	const song = await response.json();
-	console.log(song);
+	// console.log(song);
 
 	const isPlaying = song.is_playing;
 	const title = song.item.name;

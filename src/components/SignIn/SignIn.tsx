@@ -22,7 +22,6 @@ export default function SignIn() {
 		const signedInUser = localStorage.getItem("user");
 		if (signedInUser) {
 			const foundUser = JSON.parse(JSON.stringify(signedInUser));
-			console.log(foundUser);
 
 			setSignedIn(true);
 			setUsername(foundUser.username);
@@ -51,11 +50,8 @@ export default function SignIn() {
 		})
 			.then((response) => response.data)
 			.then((response) => {
-				console.log("Response = " + JSON.stringify(response));
-
 				setSignedIn(response.status == "SUCCESS");
 				if (response.status == "SUCCESS") {
-					console.log("SUCCESS");
 					localStorage.setItem("user", response);
 				} else {
 					setButtonStatus("error");

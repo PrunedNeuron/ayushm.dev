@@ -38,8 +38,6 @@ export default function IconRequestsPane(props: Props) {
 		);
 		setPage(page + 1);
 		setOffset((page - 1) * props.limit);
-		console.log("Page =", page);
-		console.log("Offset =", offset);
 	};
 	return (
 		<IconRequestsPaneContainer>
