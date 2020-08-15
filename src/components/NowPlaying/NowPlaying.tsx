@@ -37,7 +37,7 @@ const NowPlaying = () => {
 			const result = await getNowPlaying();
 
 			setNowPlaying(result.data);
-			setNowPlayingInitialized(true);
+			setNowPlayingInitialized(result.data.isPlaying);
 		};
 
 		fetchNowPlaying();
