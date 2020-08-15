@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { useTheme, Loading } from "@zeit-ui/react";
 import Title from "./Title";
-import withDefaults from "../../utils/WithDefaults";
+import withDefaults from "../utils/WithDefaults";
 
 const DynamicLive = dynamic(() => import("./DynamicLive"), {
 	ssr: false,

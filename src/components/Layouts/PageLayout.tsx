@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import MotionLayout from "./MotionLayout";
 
 export default function PageLayout({ children }) {
 	return (
@@ -9,7 +10,9 @@ export default function PageLayout({ children }) {
 				<header>
 					<Header />
 				</header>
-				<main>{children}</main>
+				<main>
+					{children}
+				</main>
 				<footer>
 					<Footer />
 				</footer>

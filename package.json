@@ -30,7 +30,7 @@
 		"emotion": "^10.0.27",
 		"emotion-server": "^10.0.27",
 		"framer-motion": "^2.4.1",
-		"next": "9.4.4",
+		"next": "9.5.1",
 		"next-compose-plugins": "^2.2.0",
 		"next-mdx-enhanced": "3.0.0",
 		"prism-react-renderer": "^1.1.1",
@@ -41,7 +41,8 @@
 		"remark-code-titles": "^0.1.1",
 		"remark-emoji": "^2.1.0",
 		"s-ago": "^2.2.0",
-		"styled-components": "^5.1.1"
+		"styled-components": "^5.1.1",
+		"swr": "^0.3.0"
 	},
 	"devDependencies": {
 		"@types/node": "^14.0.27",

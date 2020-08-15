@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Page, Input, Spacer, Button } from "@zeit-ui/react";
-import Layout from "../Layouts/Layout";
+import Layout from "../Layouts/MotionLayout";
 import { FormContainer, UsernameInput, PasswordInput } from "./Styles";
 import User from "@zeit-ui/react-icons/user";
 import Key from "@zeit-ui/react-icons/key";
 import { SignInText } from "./Styles";
 import ChevronRight from "@zeit-ui/react-icons/chevronRight";
-import { BASE_URL } from "../../utils/Constants";
+import { BASE_URL } from "../../lib/constants";
 import axios from "axios";
 import { useRouter } from "next/router";
 

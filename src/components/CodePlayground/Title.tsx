@@ -1,6 +1,6 @@
 import React from "react";
 import VirtualAnchor from "./Anchor/Anchor";
-import withDefaults from "../../utils/WithDefaults";
+import withDefaults from "../utils/WithDefaults";
 
 interface Props {
 	title: React.ReactNode | string;

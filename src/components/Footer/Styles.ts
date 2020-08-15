@@ -10,8 +10,15 @@ export const FooterText = styled.div<{ icons?: boolean }>`
 	word-spacing: ${(props) => (props.icons ? "0.5rem" : undefined)};
 `;
 
-export const FooterTextContainer = styled.div`
-	/* margin: 1rem; */
+export const FooterTextContainer = styled.div<FooterTextContainerProps>`
+	justify-self: ${(props) =>
+		props.center
+			? "center"
+			: props.left
+			? "flex-start"
+			: props.right
+			? "flex-end"
+			: ""};
 `;
 
 export const FooterContainer = styled.div`

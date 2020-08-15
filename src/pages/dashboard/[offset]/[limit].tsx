@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
 import axios from "axios";
-import { BASE_URL, API_KEY } from "../../../utils/Constants";
+import { BASE_URL, API_KEY } from "../../../lib/constants";
 import Dashboard from "../../../components/Dashboard/Dashboard";
 import { useRouter } from "next/router";
 import { Row, Loading } from "@zeit-ui/react";

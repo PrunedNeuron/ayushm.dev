@@ -13,11 +13,12 @@ import { Dribbble } from "@styled-icons/remix-fill/Dribbble";
 import { LinkedinBox } from "@styled-icons/remix-fill/LinkedinBox";
 import { Reactjs } from "@styled-icons/remix-fill/Reactjs";
 import { Github } from "@styled-icons/remix-fill/Github";
+import NowPlaying from "../NowPlaying/NowPlaying";
 export default function Footer() {
 	return (
 		<>
 			<FooterContainer>
-				<FooterTextContainer>
+				<FooterTextContainer left>
 					<FooterText>
 						<Icon color="grey">
 							<a
@@ -28,11 +29,9 @@ export default function Footer() {
 								<OpenSource />
 							</a>
 						</Icon>
-
-						<Text small>{/* Copyright, 2020 */}</Text>
 					</FooterText>
 				</FooterTextContainer>
-				<FooterTextContainer>
+				<FooterTextContainer left>
 					<FooterText icons>
 						<Icon color="#fa238e" size="24px" hoverable>
 							<a
@@ -75,18 +74,7 @@ export default function Footer() {
 
 				<FooterTextContainer>
 					<FooterText>
-						<Text small>
-							Built with{" "}
-							<Icon color="#00b6ff" hoverable>
-								<a
-									href="https://reactjs.org"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<Reactjs />
-								</a>
-							</Icon>
-						</Text>
+						<NowPlaying />
 					</FooterText>
 				</FooterTextContainer>
 			</FooterContainer>

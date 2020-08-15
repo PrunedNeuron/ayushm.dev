@@ -6,7 +6,7 @@ interface Props {
 	children: React.ReactNode;
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const MotionLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<>
 			<AnimatePresence exitBeforeEnter>
@@ -23,4 +23,4 @@ const Layout: React.FC<Props> = ({ children }) => {
 	);
 };
 
-export default Layout;
+export default MotionLayout;

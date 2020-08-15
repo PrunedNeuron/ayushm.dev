@@ -1,0 +1,3 @@
+curl -d client_id=7d971836ff55417e94af85ecfd19c92f -d client_secret=7b386d31c9ec479ab7fd65b6580d0115 -d grant_type=authorization_code -d code=AQB_v4xqbl6WwG8J6rqsTVhh04knLSEmHdDC4xJAPyXUAnWfQFNy3d0Wg1vZ9dgis0iBX0GvyWfBbCVGpAZsTVNLSonvcIoL2FrjSGrGW3JxxYAkiMFhbYGQl6K4eKW8A960_9fY3eU4E_hqhEvAeI_Lwo-C9s8Uai1olYxWnkBv3VaZ0lxrFtz_3kaPE-nOXXO- -d redirect_uri=http://localhost:3001 https://accounts.spotify.com/api/token
+
+https://accounts.spotify.com/authorize?response_type=code&client_id=7d971836ff55417e94af85ecfd19c92f&scope=user-read-playback-state&redirect_uri=http%3A%2F%2Flocalhost:3001

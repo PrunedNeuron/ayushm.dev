@@ -10,12 +10,12 @@ import {
 } from "@zeit-ui/react";
 import Code from "../../ui/Code/Code";
 import { CheckSolidIcon, CheckOutlineIcon } from "./Styles";
-import Layout from "../../Layouts/Layout";
+import Layout from "../../Layouts/MotionLayout";
 import PlayStore from "../Icons/PlayStore/PlayStore";
 import Google from "../Icons/Google/Google";
 import Copy from "../Icons/Copy/Copy";
 import axios from "axios";
-import { BASE_URL, API_KEY } from "../../../utils/Constants";
+import { BASE_URL, API_KEY } from "../../../lib/constants";
 
 interface Props {
 	name: string;
