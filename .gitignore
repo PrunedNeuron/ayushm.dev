@@ -37,3 +37,6 @@ yarn.lock
 .next
 .mdx-data
 
+# pm2
+ecosystem.config.js
+ecosystem.yml

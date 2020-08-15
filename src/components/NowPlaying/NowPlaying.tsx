@@ -12,7 +12,6 @@ import {
 import Icon from "../ui/Icon/Icon";
 import { Spotify } from "@styled-icons/remix-fill/Spotify";
 import { useState, useEffect } from "react";
-import useSWR from "swr";
 
 const NowPlaying = () => {
 	const [nowPlayingInitialized, setNowPlayingInitialized] = useState(false);
@@ -27,8 +26,10 @@ const NowPlaying = () => {
 	});
 
 	const getNowPlaying = async () => {
-		const { data } = useSWR("/api/spotify", fetcher);
-		return data;
+		return await axios({
+			url: "https://ayushm.dev/api/spotify",
+			method: "GET"
+		});
 	};
 
 	useEffect(() => {

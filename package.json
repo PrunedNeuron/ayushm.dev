@@ -6,7 +6,8 @@
 	"scripts": {
 		"dev": "next -p 3001",
 		"build": "next build",
-		"start": "next start -p 3001"
+		"start": "next start -p 3001",
+		"deploy": "pm2 restart ecosystem.yml --env"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.34",
