@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Page, Spacer, Button } from "@zeit-ui/react";
-import Layout from "../Layouts/MotionLayout";
 import { FormContainer, UsernameInput, PasswordInput } from "./Styles";
 import User from "@zeit-ui/react-icons/user";
 import Key from "@zeit-ui/react-icons/key";

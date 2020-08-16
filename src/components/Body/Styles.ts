@@ -7,10 +7,15 @@ export const BodyContainer = styled.div`
 `;
 
 export const Cards = styled.div`
-	display: flex;
+	margin-left: 12.5vw;
+	display: inline-flex;
+	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
 	align-items: center;
+	/* 			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 1rem;
+			grid-auto-rows: 15rem; */
 `;
 
 export const CardContainer = styled.div`

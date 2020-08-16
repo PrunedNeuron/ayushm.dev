@@ -1,4 +1,4 @@
-import { AppProps, NextWebVitalsMetric } from "next/app";
+import { AppProps } from "next/app";
 import "../../styles/global.css";
 import { ZeitProvider, CssBaseline } from "@zeit-ui/react";
 import Theme from "../themes/theme";

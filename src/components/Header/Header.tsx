@@ -34,7 +34,7 @@ const Header: React.FC = (): JSX.Element => {
 							<a className="plainLink">
 								<Text h4 style={{ fontWeight: 300 }}>
 									<Twemoji emoji="🦹" />
-									&nbsp;ayush
+									&nbsp; ayush
 								</Text>
 							</a>
 						</Link>
@@ -51,6 +51,7 @@ const Header: React.FC = (): JSX.Element => {
 						<ZeitLink block>Contact</ZeitLink>
 					</Link>
 				</Links>
+				{/* <hr /> */}
 			</HeaderContainer>
 		</>
 	);
