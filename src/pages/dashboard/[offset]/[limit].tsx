@@ -5,7 +5,7 @@ import { BASE_URL, API_KEY } from "../../../lib/constants";
 import Dashboard from "../../../components/Dashboard/Dashboard";
 import { useRouter } from "next/router";
 import { Row, Loading } from "@zeit-ui/react";
-import { IconRequest } from "../../../../types";
+import { IconRequest } from "../../../typings/types";
 
 type Props = {
 	requests: IconRequest[];
