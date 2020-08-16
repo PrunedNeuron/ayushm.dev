@@ -10,7 +10,7 @@ import { LogOut } from "@zeit-ui/react-icons";
 import { Page, Divider } from "@zeit-ui/react";
 import { Greeting } from "./Styles";
 
-export default function DashboardHeader() {
+const DashboardHeader: React.FC = (): JSX.Element => {
 	const signOutHandler = () => {
 		localStorage.clear();
 		window.location.replace("/");
@@ -38,4 +38,6 @@ export default function DashboardHeader() {
 			</Divider>
 		</Page.Header>
 	);
-}
+};
+
+export default DashboardHeader;

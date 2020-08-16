@@ -4,7 +4,14 @@ import { PostHeading, PostContent, PostContainer } from "./Styles";
 import { Home, FileText } from "@zeit-ui/react-icons";
 import Link from "next/link";
 
-export default function BlogPost({ frontMatter, content }) {
+interface Props {
+	frontMatter: FrontMatter;
+	content: any;
+}
+
+// export default function BlogPost({ frontMatter, content })
+
+const BlogPost: React.FC<Props> = (props: Props): JSX.Element => {
 	return (
 		<>
 			<PostContainer>
@@ -21,13 +28,15 @@ export default function BlogPost({ frontMatter, content }) {
 							</Breadcrumbs.Item>
 						</Link>
 					</Breadcrumbs>
-					<Text h2>{frontMatter.title}</Text>
+					<Text h2>{props.frontMatter.title}</Text>
 				</PostHeading>
 				<Divider />
 				<PostContent>
-					<Text p>{content}</Text>
+					<Text p>{props.content}</Text>
 				</PostContent>
 			</PostContainer>
 		</>
 	);
-}
+};
+
+export default BlogPost;

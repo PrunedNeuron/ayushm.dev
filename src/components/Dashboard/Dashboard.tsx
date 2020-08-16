@@ -2,7 +2,7 @@ import React from "react";
 
 import DashboardHeader from "./Header/DashboardHeader";
 import IconRequestsPane from "./Panes/IconRequestsPane/IconRequestsPane";
-import { Progress, Spacer, Page } from "@zeit-ui/react";
+import { Page } from "@zeit-ui/react";
 import StatsPane from "./Panes/StatsPane/StatsPane";
 import { DashboardContainer } from "./Styles";
 
@@ -20,7 +20,7 @@ interface Props {
 	doneCount: number;
 }
 
-export default function Dashboard(props: Props) {
+const Dashboard: React.FC<Props> = (props: Props): JSX.Element => {
 	return (
 		<Page size="large" render="effect-seo">
 			<Page.Content>
@@ -44,4 +44,6 @@ export default function Dashboard(props: Props) {
 			</Page.Content>
 		</Page>
 	);
-}
+};
+
+export default Dashboard;

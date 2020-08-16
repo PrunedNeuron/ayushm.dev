@@ -10,7 +10,7 @@ import { Text, Divider, Card, Link } from "@zeit-ui/react";
 import { MailOpen } from "@styled-icons/ionicons-solid/MailOpen";
 import Icon from "../../ui/Icon/Icon";
 
-export default function ContactBody() {
+const ContactBody: React.FC = (): JSX.Element => {
 	return (
 		<>
 			<BodyContainer>
@@ -44,4 +44,6 @@ export default function ContactBody() {
 			</BodyContainer>
 		</>
 	);
-}
+};
+
+export default ContactBody;

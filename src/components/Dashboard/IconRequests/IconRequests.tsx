@@ -15,7 +15,7 @@ interface Props {
 	doneCount: number;
 }
 
-export default function IconRequests(props: Props) {
+const IconRequests: React.FC<Props> = (props: Props): JSX.Element => {
 	const iconRequests = props.iconRequests.map((request) => (
 		<IconRequest
 			key={request.component}
@@ -27,4 +27,6 @@ export default function IconRequests(props: Props) {
 		/>
 	));
 	return <div>{iconRequests}</div>;
-}
+};
+
+export default IconRequests;

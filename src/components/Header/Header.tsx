@@ -17,9 +17,9 @@ import Link from "next/link";
 // import Moon from "@zeit-ui/react-icons/moon";
 import { Sunny } from "@styled-icons/ionicons-solid/Sunny";
 import { Moon } from "@styled-icons/boxicons-solid/Moon";
-import ThemeContext from "../theme/ThemeContext";
+import ThemeContext from "../Contexts/ThemeContext";
 
-export default function Header() {
+const Header: React.FC = (): JSX.Element => {
 	const theme = useContext(ThemeContext);
 	return (
 		<>
@@ -58,4 +58,6 @@ export default function Header() {
 			</HeaderContainer>
 		</>
 	);
-}
+};
+
+export default Header;

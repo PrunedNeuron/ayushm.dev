@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PlayStore } from '@styled-icons/boxicons-logos/PlayStore';
+import { PlayStore } from "@styled-icons/boxicons-logos/PlayStore";
 
 export const PlayStoreIcon = styled(PlayStore)`
 	height: 18px;

@@ -26,7 +26,7 @@ interface Props {
 	doneCount: number;
 }
 
-export default function IconRequestsPane(props: Props) {
+const IconRequestsPane: React.FC<Props> = (props: Props): JSX.Element => {
 	const router = useRouter();
 	const [, setPage] = useState(1);
 	const [offset, setOffset] = useState(props.offset);
@@ -72,4 +72,6 @@ export default function IconRequestsPane(props: Props) {
 			</>
 		</IconRequestsPaneContainer>
 	);
-}
+};
+
+export default IconRequestsPane;

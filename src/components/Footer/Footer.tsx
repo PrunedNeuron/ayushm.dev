@@ -1,20 +1,14 @@
 import React from "react";
-import { Text, Divider, Spacer } from "@zeit-ui/react";
-import { LogoReact } from "@styled-icons/ionicons-solid/LogoReact";
-import { LogoLinkedin } from "@styled-icons/ionicons-solid/LogoLinkedin";
-import { LogoDribbble } from "@styled-icons/ionicons-solid/LogoDribbble";
 import Icon from "../ui/Icon/Icon";
 import { FooterText, FooterContainer, FooterTextContainer } from "./Styles";
-// import { Copyright } from "@styled-icons/material-twotone/Copyright";
-import { Copyright } from "@styled-icons/remix-fill/Copyright";
 import { OpenSource } from "@styled-icons/remix-fill/OpenSource";
 import { Spotify } from "@styled-icons/remix-fill/Spotify";
 import { Dribbble } from "@styled-icons/remix-fill/Dribbble";
 import { LinkedinBox } from "@styled-icons/remix-fill/LinkedinBox";
-import { Reactjs } from "@styled-icons/remix-fill/Reactjs";
 import { Github } from "@styled-icons/remix-fill/Github";
 import NowPlaying from "../NowPlaying/NowPlaying";
-export default function Footer() {
+
+const Footer: React.FC = (): JSX.Element => {
 	return (
 		<>
 			<FooterContainer>
@@ -80,4 +74,6 @@ export default function Footer() {
 			</FooterContainer>
 		</>
 	);
-}
+};
+
+export default Footer;

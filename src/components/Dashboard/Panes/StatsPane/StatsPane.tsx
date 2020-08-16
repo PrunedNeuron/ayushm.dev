@@ -16,7 +16,7 @@ interface Props {
 	doneCount: number;
 }
 
-export default function StatsPane(props: Props) {
+const StatsPane: React.FC<Props> = (props: Props): JSX.Element => {
 	const totalCount = props.doneCount + props.pendingCount;
 
 	return (
@@ -51,4 +51,6 @@ export default function StatsPane(props: Props) {
 			</Card>
 		</StatsPaneContainer>
 	);
-}
+};
+
+export default StatsPane;

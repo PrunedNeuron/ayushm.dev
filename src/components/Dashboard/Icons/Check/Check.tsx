@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Tooltip, useToasts } from "@zeit-ui/react";
 import { CheckSolidIcon, CheckOutlineIcon } from "./Styles";
 
-export default function Check(props: { status: string }) {
+interface Props {
+	status: string;
+}
+
+const Check: React.FC<Props> = (props: Props): JSX.Element => {
 	const [status, setStatus] = useState(props.status);
 	const [toasts, setToast] = useToasts();
 
@@ -22,4 +26,6 @@ export default function Check(props: { status: string }) {
 			</a>
 		</Tooltip>
 	);
-}
+};
+
+export default Check;

@@ -1,6 +1,8 @@
 import React from "react";
 import SignIn from "../../components/SignIn/SignIn";
 
-export default function Login() {
+const Login: React.FC = (): JSX.Element => {
 	return <SignIn />;
-}
+};
+
+export default Login;

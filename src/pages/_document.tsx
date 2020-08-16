@@ -1,10 +1,23 @@
-import Document, { DocumentContext } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import React from "react";
+import Document, {
+	Html,
+	Head,
+	Main,
+	NextScript,
+	DocumentContext
+} from "next/document";
 import { CssBaseline } from "@zeit-ui/react";
-import { extractCritical } from "emotion-server";
+import { ServerStyleSheet } from "styled-components";
 
-export default class MyDocument extends Document {
-	static async getInitialProps(ctx: DocumentContext) {
+class MyDocument extends Document {
+	static async getInitialProps(
+		ctx: DocumentContext
+	): Promise<{
+		styles: JSX.Element;
+		html: string;
+		head?: JSX.Element[];
+	}> {
+		const styles = CssBaseline.flush();
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
 
@@ -16,23 +29,11 @@ export default class MyDocument extends Document {
 				});
 
 			const initialProps = await Document.getInitialProps(ctx);
-			const styles = CssBaseline.flush();
-
-			// emotion
-			const emotionStyles = extractCritical(initialProps.html);
-
 			return {
 				...initialProps,
 				styles: (
 					<>
 						{initialProps.styles}
-						{/* emotion */}
-						<style
-							data-emotion-css={emotionStyles.ids.join(" ")}
-							dangerouslySetInnerHTML={{
-								__html: emotionStyles.css
-							}}
-						/>
 						{styles}
 						{sheet.getStyleElement()}
 					</>
@@ -42,4 +43,18 @@ export default class MyDocument extends Document {
 			sheet.seal();
 		}
 	}
+
+	render(): JSX.Element {
+		return (
+			<Html>
+				<Head />
+				<body>
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		);
+	}
 }
+
+export default MyDocument;

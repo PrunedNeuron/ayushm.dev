@@ -8,6 +8,6 @@ const P = styled.p`
 	color: #696969;
 `;
 
-export default function RegularText({ children }) {
+export default function RegularText(children: React.ReactNode): JSX.Element {
 	return <P>{children}</P>;
 }

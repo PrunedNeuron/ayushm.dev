@@ -1,10 +1,12 @@
 import React from "react";
-import { CardContainer } from './Styles';
+import { CardContainer } from "./Styles";
 
-export default function Card({ children }) {
+const Card: React.FC = (children: React.ReactNode): JSX.Element => {
 	return (
 		<div>
 			<CardContainer>{children}</CardContainer>
 		</div>
 	);
-}
+};
+
+export default Card;

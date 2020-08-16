@@ -2,7 +2,11 @@ import React from "react";
 import { Tooltip } from "@zeit-ui/react";
 import { GoogleIcon } from "./Styles";
 
-export default function Google(props: { name: string }) {
+interface Props {
+	name: string;
+}
+
+const Google: React.FC<Props> = (props: Props): JSX.Element => {
 	const getSearchLink = (query: string) =>
 		"https://google.com/search?q=" + encodeURI(query + " app");
 
@@ -17,4 +21,6 @@ export default function Google(props: { name: string }) {
 			</a>
 		</Tooltip>
 	);
-}
+};
+
+export default Google;

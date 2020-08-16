@@ -7,7 +7,6 @@ import {
 	Heading,
 	HeadingContainer
 } from "./Styles";
-import { LogoNodejs } from "@styled-icons/ionicons-solid/LogoNodejs";
 import { NodeDotJs } from "@styled-icons/simple-icons/NodeDotJs";
 import { Typescript } from "@styled-icons/simple-icons/Typescript";
 import { Python } from "@styled-icons/simple-icons/Python";
@@ -18,7 +17,7 @@ import { ReactLogo } from "@styled-icons/simple-icons/ReactLogo";
 import { Http } from "@styled-icons/material-rounded/Http";
 import Icon from "../ui/Icon/Icon";
 
-export default function Body() {
+const Body: React.FC = (): JSX.Element => {
 	return (
 		<>
 			<BodyContainer>
@@ -139,4 +138,6 @@ export default function Body() {
 			</BodyContainer>
 		</>
 	);
-}
+};
+
+export default Body;

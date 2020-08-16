@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { CopyIcon } from "./Styles";
 import { Tooltip, useClipboard, useToasts } from "@zeit-ui/react";
 
-export default function Copy(props: { component: string }) {
+interface Props {
+	component: string;
+}
+
+const Copy: React.FC<Props> = (props: Props): JSX.Element => {
 	const [copied, setCopied] = useState(false);
 	const [toasts, setToast] = useToasts();
 	const { copy } = useClipboard();
@@ -24,4 +28,6 @@ export default function Copy(props: { component: string }) {
 			</a>
 		</Tooltip>
 	);
-}
+};
+
+export default Copy;

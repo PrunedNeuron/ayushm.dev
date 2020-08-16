@@ -1,4 +1,4 @@
-import { fetcher } from "../../lib/fetcher";
+import React from "react";
 import axios from "axios";
 import { Image, Spinner } from "@zeit-ui/react";
 import {
@@ -13,7 +13,7 @@ import Icon from "../ui/Icon/Icon";
 import { Spotify } from "@styled-icons/remix-fill/Spotify";
 import { useState, useEffect } from "react";
 
-const NowPlaying = () => {
+const NowPlaying: React.FC = (): JSX.Element => {
 	const [nowPlayingInitialized, setNowPlayingInitialized] = useState(false);
 	const [nowPlaying, setNowPlaying] = useState({
 		status: -1,

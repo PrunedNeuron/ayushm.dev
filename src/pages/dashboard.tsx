@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Dashboard() {
+const Dashboard: React.FC = (): JSX.Element => {
 	const router = useRouter();
 	const limit = 4;
 	useEffect(() => {
@@ -12,4 +12,6 @@ export default function Dashboard() {
 		router.push("/dashboard/[offset]/[limit]", `/dashboard/0/${limit}`);
 	}, []);
 	return <div></div>;
-}
+};
+
+export default Dashboard;

@@ -8,6 +8,6 @@ const P = styled.p`
 	color: #696969;
 `;
 
-export default function LightText({ children }) {
+export default function LightText(children: React.ReactNode): JSX.Element {
 	return <P>{children}</P>;
 }

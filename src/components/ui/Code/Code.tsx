@@ -1,15 +1,14 @@
 import React from "react";
 import { CodeContainer, Wrapper } from "./Styles";
-import { css } from "@emotion/core";
 
-export default function Code({ children }) {
+const Code: React.FC = (children: React.ReactNode): JSX.Element => {
 	return (
 		<div>
 			<Wrapper>
-				<CodeContainer>
-					{children}
-				</CodeContainer>
+				<CodeContainer>{children}</CodeContainer>
 			</Wrapper>
 		</div>
 	);
-}
+};
+
+export default Code;

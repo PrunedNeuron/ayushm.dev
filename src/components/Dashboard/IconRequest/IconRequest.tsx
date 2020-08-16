@@ -25,7 +25,7 @@ interface Props {
 	status: string;
 }
 
-export default function IconRequest(props: Props) {
+const IconRequest: React.FC<Props> = (props: Props): JSX.Element => {
 	const [status, setStatus] = useState(props.status);
 	const [toasts, setToast] = useToasts();
 
@@ -107,4 +107,6 @@ export default function IconRequest(props: Props) {
 			</Card>
 		</Layout>
 	);
-}
+};
+
+export default IconRequest;

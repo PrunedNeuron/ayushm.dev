@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Page, Input, Spacer, Button } from "@zeit-ui/react";
+import { Page, Spacer, Button } from "@zeit-ui/react";
 import Layout from "../Layouts/MotionLayout";
 import { FormContainer, UsernameInput, PasswordInput } from "./Styles";
 import User from "@zeit-ui/react-icons/user";
@@ -10,7 +10,7 @@ import { BASE_URL } from "../../lib/constants";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-export default function SignIn() {
+const SignIn: React.FC = (): JSX.Element => {
 	const [username, setUsername] = useState();
 	const [password, setPassword] = useState();
 	const [signedIn, setSignedIn] = useState(false);
@@ -54,7 +54,7 @@ export default function SignIn() {
 				if (response.status == "SUCCESS") {
 					localStorage.setItem("user", response);
 				} else {
-					setButtonStatus("error");
+					if (buttonStatus !== "error") setButtonStatus("error");
 				}
 			})
 			.catch((error) => {
@@ -69,35 +69,35 @@ export default function SignIn() {
 
 	return (
 		<Page dotBackdrop render="effect-seo" size="small">
-			<Layout>
-				<FormContainer>
-					<SignInText>Sign In</SignInText>
-					<UsernameInput
-						clearable
-						icon={<User />}
-						placeholder="  Username"
-						value={username}
-						onChange={usernameInputHandler}
-					/>
-					<Spacer y={0.5} />
-					<PasswordInput
-						icon={<Key />}
-						placeholder="Password"
-						value={password}
-						onChange={passwordInputHandler}
-					/>
-					<Spacer y={0.5} />
-					<Button
-						type="success"
-						iconRight={<ChevronRight />}
-						onClick={signInHandler}
-						shadow
-						auto
-					>
-						Sign in
-					</Button>
-				</FormContainer>
-			</Layout>
+			<FormContainer>
+				<SignInText>Sign In</SignInText>
+				<UsernameInput
+					clearable
+					icon={<User />}
+					placeholder="  Username"
+					value={username}
+					onChange={usernameInputHandler}
+				/>
+				<Spacer y={0.5} />
+				<PasswordInput
+					icon={<Key />}
+					placeholder="Password"
+					value={password}
+					onChange={passwordInputHandler}
+				/>
+				<Spacer y={0.5} />
+				<Button
+					type="success"
+					iconRight={<ChevronRight />}
+					onClick={signInHandler}
+					shadow
+					auto
+				>
+					Sign in
+				</Button>
+			</FormContainer>
 		</Page>
 	);
-}
+};
+
+export default SignIn;

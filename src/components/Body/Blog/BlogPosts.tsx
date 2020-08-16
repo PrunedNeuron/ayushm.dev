@@ -1,3 +1,4 @@
+import React from "react";
 import { frontMatter as pages } from "../../../pages/blog/**/*.mdx";
 import Link from "next/link";
 import { Posts, Heading, BlogPostsContainer, BlogPost, Badges } from "./Styles";
@@ -13,7 +14,7 @@ import {
 } from "@zeit-ui/react";
 import ago from "s-ago";
 
-export default function BlogPosts() {
+const BlogPosts: React.FC = (): JSX.Element => {
 	const theme = useTheme();
 	const formatPath = (path: string) => path.replace(/\.mdx$/, "");
 	const getId = (page) =>
@@ -91,4 +92,6 @@ export default function BlogPosts() {
 			</BlogPostsContainer>
 		</>
 	);
-}
+};
+
+export default BlogPosts;

@@ -5,6 +5,52 @@ import { BASE_URL, API_KEY } from "../../../lib/constants";
 import Dashboard from "../../../components/Dashboard/Dashboard";
 import { useRouter } from "next/router";
 import { Row, Loading } from "@zeit-ui/react";
+import { IconRequest } from "../../../../types";
+
+type Props = {
+	requests: IconRequest[];
+	offset: number;
+	limit: number;
+	pendingCount: number;
+	doneCount: number;
+};
+
+const Requests: React.FC<Props> = ({
+	requests,
+	offset,
+	limit,
+	pendingCount,
+	doneCount
+}: Props) => {
+	const [signedIn, setSignedIn] = useState(false);
+
+	const router = useRouter();
+
+	useEffect(() => {
+		const signedInUser = localStorage.getItem("user");
+		if (signedInUser) {
+			setSignedIn(true);
+		} else router.push("/dashboard/login");
+	}, []);
+
+	if (signedIn) {
+		return (
+			<Dashboard
+				iconRequests={requests}
+				offset={offset}
+				limit={limit}
+				pendingCount={pendingCount}
+				doneCount={doneCount}
+			/>
+		);
+	} else {
+		return (
+			<Row style={{ padding: "10px 0" }}>
+				<Loading />
+			</Row>
+		);
+	}
+};
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	const { offset, limit } = context.params;
@@ -50,39 +96,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	};
 };
 
-export default function Requests({
-	requests,
-	offset,
-	limit,
-	pendingCount,
-	doneCount
-}) {
-	const [signedIn, setSignedIn] = useState(false);
-
-	const router = useRouter();
-
-	useEffect(() => {
-		const signedInUser = localStorage.getItem("user");
-		if (signedInUser) {
-			setSignedIn(true);
-		} else router.push("/dashboard/login");
-	}, []);
-
-	if (signedIn) {
-		return (
-			<Dashboard
-				iconRequests={requests}
-				offset={offset}
-				limit={limit}
-				pendingCount={pendingCount}
-				doneCount={doneCount}
-			/>
-		);
-	} else {
-		return (
-			<Row style={{ padding: "10px 0" }}>
-				<Loading />
-			</Row>
-		);
-	}
-}
+export default Requests;

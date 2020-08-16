@@ -1,18 +1,19 @@
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import MotionLayout from "./MotionLayout";
 
-export default function PageLayout({ children }) {
+interface Props {
+	children: React.ReactNode;
+}
+
+const PageLayout: React.FC<Props> = ({ children }: Props): JSX.Element => {
 	return (
 		<>
 			<div className="wrapper">
 				<header>
 					<Header />
 				</header>
-				<main>
-					{children}
-				</main>
+				<main>{children}</main>
 				<footer>
 					<Footer />
 				</footer>
@@ -65,4 +66,6 @@ export default function PageLayout({ children }) {
 			`}</style>
 		</>
 	);
-}
+};
+
+export default PageLayout;
