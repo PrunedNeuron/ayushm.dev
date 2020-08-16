@@ -1,0 +1,6 @@
+*.js
+node_modules
+.next
+.mdx-data
+*.lock
+*.json

@@ -1,3 +1,0 @@
-curl -d client_id=7d971836ff55417e94af85ecfd19c92f -d client_secret=7b386d31c9ec479ab7fd65b6580d0115 -d grant_type=authorization_code -d code=AQAFL07sDPOimcflHBiWtrRWFKSSqg1X6Ri2wrQFf1z7uL8E6EmGlGAB7b13YGTPfsUsAVjf8sV8TKfSWhKdfapuhCfYJlkkBRLaouVBXwGwudqb7gHxbKXsLVQj4kAjJiThyrNRgMb_sRw2Sw1DOnk09ETAlX9xNqVzHPXIOk1DclUImYvEiwkWHzgvqiCa -d redirect_uri=https://ayushm.dev https://accounts.spotify.com/api/token
-
-https://accounts.spotify.com/authorize?response_type=code&client_id=7d971836ff55417e94af85ecfd19c92f&scope=user-read-playback-state&redirect_uri=http%3A%2F%2Flocalhost:3001

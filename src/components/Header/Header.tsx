@@ -1,12 +1,5 @@
 import React, { useContext } from "react";
-import {
-	Button,
-	Link as ZeitLink,
-	useTheme,
-	Text,
-	Tooltip,
-	Image
-} from "@zeit-ui/react";
+import { Button, Link as ZeitLink, Text } from "@zeit-ui/react";
 import {
 	Links,
 	ThemeToggleButton,
@@ -14,10 +7,10 @@ import {
 	HeaderContainer
 } from "./Styles";
 import Link from "next/link";
-// import Moon from "@zeit-ui/react-icons/moon";
 import { Sunny } from "@styled-icons/ionicons-solid/Sunny";
 import { Moon } from "@styled-icons/boxicons-solid/Moon";
 import ThemeContext from "../Contexts/ThemeContext";
+import Twemoji from "../ui/Twemoji/Twemoji";
 
 const Header: React.FC = (): JSX.Element => {
 	const theme = useContext(ThemeContext);
@@ -39,7 +32,10 @@ const Header: React.FC = (): JSX.Element => {
 					<Text size="1.5rem">
 						<Link href="/">
 							<a className="plainLink">
-								<Text style={{ fontWeight: 300 }}>ayush</Text>
+								<Text h4 style={{ fontWeight: 300 }}>
+									<Twemoji emoji="🦹" />
+									&nbsp;ayush
+								</Text>
 							</a>
 						</Link>
 					</Text>

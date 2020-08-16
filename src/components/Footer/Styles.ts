@@ -19,6 +19,7 @@ export const FooterTextContainer = styled.div<FooterTextContainerProps>`
 			: props.right
 			? "flex-end"
 			: ""};
+	align-items: center;
 `;
 
 export const FooterContainer = styled.div`
@@ -26,5 +27,6 @@ export const FooterContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	border-top: 1px solid #ededed;
-	padding: 1rem;
+	padding: 0.5rem;
+	min-height: 4rem;
 `;
