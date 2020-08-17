@@ -1,7 +1,7 @@
 import React from "react";
 import { frontMatter as pages } from "../../../pages/blog/**/*.mdx";
 import Link from "next/link";
-import { Posts, Heading, BlogPostsContainer, BlogPost, Badges } from "./Styles";
+import { Posts, BlogPostsContainer, BlogPost, Badges } from "./Styles";
 import {
 	Text,
 	Divider,
@@ -13,6 +13,7 @@ import {
 	Badge
 } from "@zeit-ui/react";
 import ago from "s-ago";
+import Heading from "../../ui/Heading/Heading";
 
 const BlogPosts: React.FC = (): JSX.Element => {
 	const theme = useTheme();

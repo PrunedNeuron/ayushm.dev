@@ -1,7 +1,6 @@
 import React from "react";
 import {
 	BodyContainer,
-	Heading,
 	HeadingContainer,
 	Cards,
 	CardContainer
@@ -9,6 +8,7 @@ import {
 import { Text, Divider, Card, Link } from "@zeit-ui/react";
 import { MailOpen } from "@styled-icons/ionicons-solid/MailOpen";
 import Icon from "../../ui/Icon/Icon";
+import Heading from "../../ui/Heading/Heading";
 
 const ContactBody: React.FC = (): JSX.Element => {
 	return (
@@ -22,7 +22,7 @@ const ContactBody: React.FC = (): JSX.Element => {
 				<Divider />
 				<Cards>
 					<CardContainer>
-						<Card type="lite" width="330px" hoverable>
+						<Card>
 							<Icon color="#0766ff">
 								<MailOpen />
 							</Icon>

@@ -26,6 +26,7 @@ const PageLayout: React.FC<Props> = ({ children }: Props): JSX.Element => {
 				.wrapper {
 					display: flex;
 					flex-direction: column;
+					min-width: 100vw;
 					min-height: 100vh;
 					 {
 						/* margin: 0 2rem; */
@@ -33,14 +34,11 @@ const PageLayout: React.FC<Props> = ({ children }: Props): JSX.Element => {
 				}
 
 				main {
+					width: 100vw;
+					height: 100vh;
 					display: flex;
 					flex-wrap: wrap;
 					flex: 1;
-					 {
-						/*margin: 1rem;
-					 
-						align-items: center; */
-					}
 				}
 
 				header,

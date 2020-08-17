@@ -1,12 +1,7 @@
 import React from "react";
 import { Text, Card, Link, Divider } from "@zeit-ui/react";
 import { Cards } from "./Styles";
-import {
-	BodyContainer,
-	CardContainer,
-	Heading,
-	HeadingContainer
-} from "./Styles";
+import { BodyContainer, CardContainer, Heading } from "./Styles";
 import { NodeDotJs } from "@styled-icons/simple-icons/NodeDotJs";
 import { Typescript } from "@styled-icons/simple-icons/Typescript";
 import { Python } from "@styled-icons/simple-icons/Python";
@@ -22,11 +17,9 @@ const Body: React.FC = (): JSX.Element => {
 		<>
 			<BodyContainer>
 				<Text>Graphic Designer & Software Developer.</Text>
-				<HeadingContainer>
-					<Heading>
-						<Text h3>Projects</Text>
-					</Heading>
-				</HeadingContainer>
+				<Heading>
+					<Text h3>Projects</Text>
+				</Heading>
 				<Divider />
 				<Cards>
 					<CardContainer>
