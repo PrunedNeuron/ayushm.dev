@@ -28,16 +28,11 @@ interface Props {
 
 const IconRequestsPane: React.FC<Props> = (props: Props): JSX.Element => {
 	const router = useRouter();
-	const [, setPage] = useState(1);
-	const [offset, setOffset] = useState(props.offset);
-
 	const handlePagination = (page: number) => {
 		router.push(
 			"/dashboard/[offset]/[limit]",
 			`/dashboard/${(page - 1) * props.limit}/${props.limit}`
 		);
-		setPage(page + 1);
-		setOffset((page - 1) * props.limit);
 	};
 	return (
 		<IconRequestsPaneContainer>
