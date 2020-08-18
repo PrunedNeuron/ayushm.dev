@@ -28,7 +28,7 @@ export const Name = styled.span`
 `;
 
 export const Container = styled.div`
-	width: 90%;
+	width: 70%;
 	display: flex;
 	align-items: center;
 	margin: 0 auto;

@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { Card, CardTitle, IconContainer } from "./Styles";
 import ClickToSelect from "@mapbox/react-click-to-select";
-import {
-	Badge,
-	Spacer,
-	useClipboard,
-	Tooltip,
-	useToasts
-} from "@zeit-ui/react";
+import { Badge, Spacer, Tooltip, useToasts } from "@zeit-ui/react";
 import Code from "../../ui/Code/Code";
 import { CheckSolidIcon, CheckOutlineIcon } from "./Styles";
 import Layout from "../../Layouts/MotionLayout";
@@ -27,7 +21,7 @@ interface Props {
 
 const IconRequest: React.FC<Props> = (props: Props): JSX.Element => {
 	const [status, setStatus] = useState(props.status);
-	const [toasts, setToast] = useToasts();
+	const [, setToast] = useToasts();
 
 	const updateRequestStatus = async () => {
 		const serverResponse = await axios({

@@ -9,14 +9,12 @@ import {
 	Dot,
 	Link as ZeitLink,
 	Tooltip,
-	useTheme,
 	Badge
 } from "@zeit-ui/react";
 import ago from "s-ago";
 import Heading from "../../ui/Heading/Heading";
 
 const BlogPosts: React.FC = (): JSX.Element => {
-	const theme = useTheme();
 	const formatPath = (path: string) => path.replace(/\.mdx$/, "");
 	const getId = (page) =>
 		formatPath(page.__resourcePath.split("/pages").pop());

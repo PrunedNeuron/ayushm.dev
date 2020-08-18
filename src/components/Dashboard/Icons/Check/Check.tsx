@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tooltip, useToasts } from "@zeit-ui/react";
 import { CheckSolidIcon, CheckOutlineIcon } from "./Styles";
 
@@ -7,8 +7,7 @@ interface Props {
 }
 
 const Check: React.FC<Props> = (props: Props): JSX.Element => {
-	const [status, setStatus] = useState(props.status);
-	const [toasts, setToast] = useToasts();
+	const [, setToast] = useToasts();
 
 	const doneClickHandler = () => {
 		// await updateRequestStatus();

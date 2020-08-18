@@ -7,8 +7,8 @@ interface Props {
 }
 
 const Copy: React.FC<Props> = (props: Props): JSX.Element => {
-	const [copied, setCopied] = useState(false);
-	const [toasts, setToast] = useToasts();
+	const [, setCopied] = useState(false);
+	const [, setToast] = useToasts();
 	const { copy } = useClipboard();
 
 	const copyClickHandler = () => {

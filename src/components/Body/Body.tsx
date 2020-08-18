@@ -1,6 +1,6 @@
 import React from "react";
-import Twemoji from "../ui/Twemoji/Twemoji";
 import { Container, Intro, Name } from "./Styles";
+import emoji from "react-easy-emoji";
 
 const Body: React.FC = (): JSX.Element => {
 	return (
@@ -8,9 +8,7 @@ const Body: React.FC = (): JSX.Element => {
 			<Container>
 				<Intro>
 					I&apos;m <Name>Ayush Mishra</Name>, a graphic designer{" "}
-					<Twemoji emoji="🖌" />
-					and developer <Twemoji emoji="💻" /> from{" "}
-					<Twemoji emoji="🇮🇳" />.
+					{emoji("🖌")} and developer {emoji("💻")} from {emoji("🇮🇳")}.
 				</Intro>
 			</Container>
 		</>
