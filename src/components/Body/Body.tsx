@@ -8,8 +8,9 @@ const Body: React.FC = (): JSX.Element => {
 			<Container>
 				<Intro>
 					I&apos;m <Name>Ayush Mishra</Name>, a graphic designer{" "}
-					<Twemoji emoji="🖌" /> and developer <Twemoji emoji="🤖" />{" "}
-					<Twemoji emoji="💻" /> from <Twemoji emoji="🇮🇳" />.
+					<Twemoji emoji="🖌" />
+					and developer <Twemoji emoji="💻" /> from{" "}
+					<Twemoji emoji="🇮🇳" />.
 				</Intro>
 			</Container>
 		</>
