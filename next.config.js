@@ -11,17 +11,15 @@ const mdx = require("next-mdx-enhanced")({
 	remarkPlugins: [remarkCodeTitles, remarkEmoji],
 	rehypePlugins: [rehypePrism],
 	extendFrontMatter: {
-		process: (mdxContent, frontMatter) => ({
+		process: (mdxContent) => ({
 			wordCount: mdxContent.split(/\s+/gu).length,
 			readingTime: readingTime(mdxContent)
-		}),
-		phase: "prebuild|loader|both"
+		})
 	}
 });
 
 const nextConfig = {
-	pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"],
+	pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "md"]
 };
 
 module.exports = withPlugins([mdx], nextConfig);
-

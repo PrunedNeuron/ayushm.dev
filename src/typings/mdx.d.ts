@@ -5,6 +5,9 @@ interface FrontMatter {
 	description: string;
 	tags: string;
 	by?: string;
+	readingTime: {
+		text: string;
+	};
 	__resourcePath: string;
 }
 

@@ -28,7 +28,11 @@ const BlogPost: React.FC<Props> = (props: Props): JSX.Element => {
 							</Breadcrumbs.Item>
 						</Link>
 					</Breadcrumbs>
+
 					<Text h2>{props.frontMatter.title}</Text>
+					<Text type="secondary" size={14} i>
+						{props.frontMatter.readingTime.text}
+					</Text>
 				</PostHeading>
 				<Divider />
 				<PostContent>
