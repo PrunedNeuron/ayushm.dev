@@ -12,7 +12,7 @@
 		"dev": "next -p 3001",
 		"build": "next build",
 		"start": "next start -p 3001",
-		"deploy": "pm2 restart ecosystem.yml --env"
+		"deploy": "pm2 restart ecosystem.yml --update-env"
 	},
 	"dependencies": {
 		"@mapbox/react-click-to-select": "^2.2.0",
