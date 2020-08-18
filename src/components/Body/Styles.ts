@@ -7,6 +7,7 @@ export const Intro = styled.p`
 `;
 
 export const Name = styled.span`
+	font-weight: 400;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
 	color: white;
