@@ -44,6 +44,9 @@ const Header: React.FC = (): JSX.Element => {
 					<Link href="/">
 						<ZeitLink block>Home</ZeitLink>
 					</Link>
+					<Link href="/work">
+						<ZeitLink block>Work</ZeitLink>
+					</Link>
 					<Link href="/blog">
 						<ZeitLink block>Blog</ZeitLink>
 					</Link>
