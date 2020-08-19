@@ -45,8 +45,7 @@
 		"remark-code-titles": "^0.1.1",
 		"remark-emoji": "^2.1.0",
 		"s-ago": "^2.2.0",
-		"styled-components": "^5.1.1",
-		"styled-media-query": "^2.1.2"
+		"styled-components": "^5.1.1"
 	},
 	"devDependencies": {
 		"@types/node": "^14.6.0",

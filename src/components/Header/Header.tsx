@@ -36,13 +36,15 @@ const Header: React.FC = (): JSX.Element => {
 						auto
 					></Button>
 				</ThemeToggleButton>
-				<HeadingContainer>
+				<HeadingContainer className="headingContainer">
 					<Text size="1.5rem">
 						<Link href="/">
 							<a className="plainLink">
 								<Text h4 style={{ fontWeight: 300 }}>
 									<Iconify icon={supervillainIcon} />
-									<HeaderName>ayush</HeaderName>
+									<HeaderName className="headingName">
+										ayush
+									</HeaderName>
 								</Text>
 							</a>
 						</Link>

@@ -25,3 +25,17 @@
 hr {
 	border: 1px solid rgb(243, 243, 243);
 }
+
+@media screen and (max-width: 435px) {
+	.headingContainer {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.headingName {
+		visibility: hidden;
+		display: none;
+	}
+}
