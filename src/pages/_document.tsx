@@ -33,8 +33,8 @@ class MyDocument extends Document {
 				...initialProps,
 				styles: (
 					<>
+						{/* {styles} */}
 						{initialProps.styles}
-						{styles}
 						{sheet.getStyleElement()}
 					</>
 				)

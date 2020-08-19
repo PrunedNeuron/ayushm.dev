@@ -26,7 +26,7 @@ hr {
 	border: 1px solid rgb(243, 243, 243);
 }
 
-/* @media screen and (max-width: 435px) {
+@media screen and (max-width: 435px) {
 	.headingContainer {
 		visibility: hidden;
 		display: none;
@@ -39,4 +39,3 @@ hr {
 		display: none;
 	}
 }
- */
