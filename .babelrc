@@ -3,7 +3,7 @@
 	"plugins": [
 		[
 			"babel-plugin-styled-components",
-			{ "ssr": true, "namespace": "ayushm.dev" }
+			{ "ssr": true, "pure": true, "namespace": "ayushm.dev" }
 		],
 		["import-glob-array"]
 	]
