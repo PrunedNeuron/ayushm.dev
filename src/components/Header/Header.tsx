@@ -12,6 +12,7 @@ import { Moon } from "@styled-icons/boxicons-solid/Moon";
 import ThemeContext from "../Contexts/ThemeContext";
 import { Icon as Iconify } from "@iconify/react";
 import supervillainIcon from "@iconify/icons-twemoji/supervillain";
+import { HeaderName } from "./Styles";
 
 const Header: React.FC = (): JSX.Element => {
 	const theme = useContext(ThemeContext);
@@ -41,7 +42,7 @@ const Header: React.FC = (): JSX.Element => {
 							<a className="plainLink">
 								<Text h4 style={{ fontWeight: 300 }}>
 									<Iconify icon={supervillainIcon} />
-									&nbsp; ayush
+									<HeaderName>ayush</HeaderName>
 								</Text>
 							</a>
 						</Link>
@@ -50,6 +51,9 @@ const Header: React.FC = (): JSX.Element => {
 				<Links>
 					<Link href="/">
 						<ZeitLink block>Home</ZeitLink>
+					</Link>
+					<Link href="/about">
+						<ZeitLink block>About</ZeitLink>
 					</Link>
 					<Link href="/work">
 						<ZeitLink block>Work</ZeitLink>
