@@ -45,7 +45,6 @@ export const AlbumData = styled.div`
 `;
 
 export const SpotifyCard = styled.div<{ dark: boolean }>`
-	user-drag: none;
 	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;

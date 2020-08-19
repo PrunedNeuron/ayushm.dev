@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Link as ZeitLink, Text } from "@zeit-ui/react";
+import { Link as ZeitLink, Text, Button } from "@zeit-ui/react";
 import {
 	Links,
 	ThemeToggleButton,
@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Sunny } from "@styled-icons/ionicons-solid/Sunny";
 import { Moon } from "@styled-icons/boxicons-solid/Moon";
 import ThemeContext from "../Contexts/ThemeContext";
-import { Icon } from "@iconify/react";
+import { Icon as Iconify } from "@iconify/react";
 import supervillainIcon from "@iconify/icons-twemoji/supervillain";
 
 const Header: React.FC = (): JSX.Element => {
@@ -20,6 +20,12 @@ const Header: React.FC = (): JSX.Element => {
 			<HeaderContainer>
 				<ThemeToggleButton>
 					<Button
+						style={{
+							padding: "0",
+							height: "2rem",
+							width: "2rem",
+							borderRadius: "50%"
+						}}
 						size="small"
 						type="abort"
 						icon={
@@ -34,7 +40,7 @@ const Header: React.FC = (): JSX.Element => {
 						<Link href="/">
 							<a className="plainLink">
 								<Text h4 style={{ fontWeight: 300 }}>
-									<Icon icon={supervillainIcon} />
+									<Iconify icon={supervillainIcon} />
 									&nbsp; ayush
 								</Text>
 							</a>
@@ -55,7 +61,6 @@ const Header: React.FC = (): JSX.Element => {
 						<ZeitLink block>Contact</ZeitLink>
 					</Link>
 				</Links>
-				{/* <hr /> */}
 			</HeaderContainer>
 		</>
 	);
