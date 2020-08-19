@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Links = styled.div`
 	margin: 1rem;
@@ -32,8 +34,20 @@ export const HeaderName = styled.span`
 	margin: 0 0.125rem;
 	padding: 0.25rem 0.5rem;
 	color: #666666;
+
+	${//@ts-ignore
+	media.lessThan("500px")`
+    	visibility: hidden;
+		display: none;
+  `}
 `;
 
 export const HeaderContainer = styled.div`
 	width: 100vw;
+
+	${//@ts-ignore
+	media.lessThan("435px")`
+    	visibility: hidden;
+		display: none;
+  `}
 `;
