@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Intro = styled.p`
+	width: 80vw;
 	font-size: 2.5rem;
 	font-weight: 200;
-	margin-bottom: 10rem;
 `;
 
 export const Name = styled.span`
+	display: inline-block;
 	font-weight: 400;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
@@ -29,7 +30,6 @@ export const Name = styled.span`
 `;
 
 export const Container = styled.div`
-	width: 70%;
 	display: flex;
 	align-items: center;
 	margin: 0 auto;

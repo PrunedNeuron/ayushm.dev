@@ -10,6 +10,8 @@ import Link from "next/link";
 import { Sunny } from "@styled-icons/ionicons-solid/Sunny";
 import { Moon } from "@styled-icons/boxicons-solid/Moon";
 import ThemeContext from "../Contexts/ThemeContext";
+import { Icon } from "@iconify/react";
+import supervillainIcon from "@iconify/icons-twemoji/supervillain";
 
 const Header: React.FC = (): JSX.Element => {
 	const theme = useContext(ThemeContext);
@@ -32,12 +34,7 @@ const Header: React.FC = (): JSX.Element => {
 						<Link href="/">
 							<a className="plainLink">
 								<Text h4 style={{ fontWeight: 300 }}>
-									<img
-										className="emoji"
-										draggable="false"
-										alt="🦹"
-										src="https://twemoji.maxcdn.com/v/13.0.1/svg/1f9b9.svg"
-									/>
+									<Icon icon={supervillainIcon} />
 									&nbsp; ayush
 								</Text>
 							</a>

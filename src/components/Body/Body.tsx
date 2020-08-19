@@ -1,5 +1,9 @@
 import React from "react";
 import { Container, Intro, Name } from "./Styles";
+import { Icon } from "@iconify/react";
+import flagForFlagIndia from "@iconify/icons-twemoji/flag-for-flag-india";
+import laptopIcon from "@iconify/icons-twemoji/laptop";
+import paintbrushIcon from "@iconify/icons-twemoji/paintbrush";
 
 const Body: React.FC = (): JSX.Element => {
 	return (
@@ -7,27 +11,11 @@ const Body: React.FC = (): JSX.Element => {
 			<Container>
 				<Intro>
 					I&apos;m <Name>Ayush Mishra</Name>, a graphic designer
-					<img
-						alt="🖌"
-						draggable="false"
-						src="//twemoji.maxcdn.com/2/72x72/1f58c.png"
-						className="emoji"
-					/>
+					<Icon className="emoji" icon={paintbrushIcon} />
 					and developer
-					<img
-						alt="💻"
-						draggable="false"
-						src="//twemoji.maxcdn.com/2/72x72/1f4bb.png"
-						className="emoji"
-					/>
+					<Icon className="emoji" icon={laptopIcon} />
 					from
-					<img
-						alt="🇮🇳"
-						draggable="false"
-						src="//twemoji.maxcdn.com/2/72x72/1f1ee-1f1f3.png"
-						className="emoji"
-					/>
-					.
+					<Icon className="emoji" icon={flagForFlagIndia} />.
 				</Intro>
 			</Container>
 		</>
