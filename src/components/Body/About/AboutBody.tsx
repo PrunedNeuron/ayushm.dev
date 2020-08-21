@@ -5,7 +5,7 @@ const AboutBody: React.FC = (): JSX.Element => {
 	return (
 		<>
 			<AboutContainer>
-				<h1>Hell</h1>
+				<h1>Hello</h1>
 			</AboutContainer>
 		</>
 	);
