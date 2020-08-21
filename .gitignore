@@ -33,6 +33,7 @@ yarn.lock
 
 /node_modules/
 
+.vscode
 .vercel
 .next
 .mdx-data
