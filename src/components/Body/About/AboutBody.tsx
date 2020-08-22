@@ -14,6 +14,7 @@ import { Icon as Iconify } from "@iconify/react";
 import Link from "next/link";
 import { Github } from "@styled-icons/remix-fill/Github";
 import artistPalette from "@iconify/icons-twemoji/artist-palette";
+import { Typescript } from "@styled-icons/simple-icons/Typescript";
 
 const AboutBody: React.FC = (): JSX.Element => {
 	return (
@@ -34,6 +35,13 @@ const AboutBody: React.FC = (): JSX.Element => {
 						<ZeitLink href="https://nextjs.org" color>
 							Next.js
 						</ZeitLink>
+						. It is written entirely in{" "}
+						<ZeitLink href="https://www.typescriptlang.org" color>
+							TypeScript
+						</ZeitLink>{" "}
+						<Icon color="#0766FF">
+							<Typescript />
+						</Icon>
 						.
 					</Text>
 					<Text>
