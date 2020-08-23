@@ -16,8 +16,9 @@ import Heading from "../../ui/Heading/Heading";
 
 const BlogPosts: React.FC = (): JSX.Element => {
 	const formatPath = (path: string) => path.replace(/\.mdx$/, "");
-	const getId = (page) =>
-		formatPath(page.__resourcePath.split("/pages").pop());
+	const getId = (page: FrontMatter) =>
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		formatPath(page.__resourcePath.split("/pages").pop()!);
 	const getHumanizedDuration = (date: string | number | Date) => {
 		const parsedDate = new Date(date);
 		return ago(parsedDate);
