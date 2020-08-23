@@ -16,3 +16,8 @@ jobs:
                       - node_modules
                   key: v1-linux-dependencies-{{ checksum "package.json" }}
             - run: npm build
+workflows:
+    version: 2
+    build:
+        jobs:
+            - linux
