@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 
 ## ayushm.dev
-My personal website.
+This is the source code of my personal website, hosted on a DigitalOcean droplet running Ubuntu 18.04, served by nginx.
 
 <!-- LICENSE -->
 
