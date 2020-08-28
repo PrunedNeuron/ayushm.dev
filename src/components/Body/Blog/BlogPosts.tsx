@@ -1,18 +1,19 @@
-import React from "react";
-import { frontMatter as pages } from "../../../pages/blog/**/*.mdx";
-import Link from "next/link";
-import { Posts, BlogPostsContainer, BlogPost, Badges } from "./Styles";
 import {
-	Text,
-	Divider,
+	Badge,
 	Card,
+	Divider,
 	Dot,
 	Link as ZeitLink,
-	Tooltip,
-	Badge
+	Text,
+	Tooltip
 } from "@zeit-ui/react";
+import Link from "next/link";
+import React from "react";
 import ago from "s-ago";
+
+import { frontMatter as pages } from "../../../pages/blog/**/*.mdx";
 import Heading from "../../ui/Heading/Heading";
+import { Badges, BlogPost, BlogPostsContainer, Posts } from "./Styles";
 
 const BlogPosts: React.FC = (): JSX.Element => {
 	const formatPath = (path: string) => path.replace(/\.mdx$/, "");

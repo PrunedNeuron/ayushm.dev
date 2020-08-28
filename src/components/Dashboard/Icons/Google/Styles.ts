@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Google } from "@styled-icons/boxicons-logos/Google";
+import styled from "styled-components";
 
 export const GoogleIcon = styled(Google)`
 	height: 18px;

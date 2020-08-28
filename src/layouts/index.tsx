@@ -1,10 +1,15 @@
-/* eslint-disable react/display-name */
 import React from "react";
-import PageLayout from "../components/Layouts/PageLayout";
-import BlogPost from "../components/Body/Blog/Post/BlogPost";
 
-export default function Layout(frontMatter: FrontMatter) {
-	return ({ children }: { children: React.ReactNode }): JSX.Element => (
+import BlogPost from "../components/Body/Blog/Post/BlogPost";
+import PageLayout from "../components/Layouts/PageLayout";
+
+interface Props {
+	children: React.ReactNode;
+	frontMatter: FrontMatter;
+}
+
+export default function Layout({ children, frontMatter }: Props): JSX.Element {
+	return (
 		<PageLayout>
 			<BlogPost frontMatter={frontMatter} content={children} />
 		</PageLayout>

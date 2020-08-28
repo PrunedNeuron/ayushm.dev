@@ -1,5 +1,6 @@
-import React from "react";
 import { Tooltip } from "@zeit-ui/react";
+import React from "react";
+
 import { GoogleIcon } from "./Styles";
 
 interface Props {

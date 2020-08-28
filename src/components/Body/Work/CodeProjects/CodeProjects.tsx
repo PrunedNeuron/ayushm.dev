@@ -1,16 +1,17 @@
-import React from "react";
-import { Text, Card, Link } from "@zeit-ui/react";
-import { Cards } from "./Styles";
-import { BodyContainer, CardContainer } from "./Styles";
-import { NodeDotJs } from "@styled-icons/simple-icons/NodeDotJs";
-import { Typescript } from "@styled-icons/simple-icons/Typescript";
-import { Python } from "@styled-icons/simple-icons/Python";
-import { Kotlin } from "@styled-icons/simple-icons/Kotlin";
+import { Http } from "@styled-icons/material-rounded/Http";
 import { Adobe } from "@styled-icons/simple-icons/Adobe";
 import { Android } from "@styled-icons/simple-icons/Android";
+import { Kotlin } from "@styled-icons/simple-icons/Kotlin";
+import { NodeDotJs } from "@styled-icons/simple-icons/NodeDotJs";
+import { Python } from "@styled-icons/simple-icons/Python";
 import { ReactLogo } from "@styled-icons/simple-icons/ReactLogo";
-import { Http } from "@styled-icons/material-rounded/Http";
+import { Typescript } from "@styled-icons/simple-icons/Typescript";
+import { Card, Link, Text } from "@zeit-ui/react";
+import React from "react";
+
 import Icon from "../../../ui/Icon/Icon";
+import { Cards } from "./Styles";
+import { BodyContainer, CardContainer } from "./Styles";
 // import { Twemoji } from "react-emoji-render";
 
 const CodeProjects: React.FC = (): JSX.Element => {

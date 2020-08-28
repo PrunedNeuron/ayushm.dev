@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { CheckCircle as CheckOutline } from "@styled-icons/heroicons-outline/CheckCircle";
 import { CheckCircle as CheckSolid } from "@styled-icons/heroicons-solid/CheckCircle";
+import styled from "styled-components";
 
 export const CheckOutlineIcon = styled(CheckOutline)`
 	height: 18px;

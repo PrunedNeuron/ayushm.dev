@@ -1,9 +1,10 @@
-import React from "react";
-import { Container, Intro, Name } from "./Styles";
-import { Icon } from "@iconify/react";
 import flagForFlagIndia from "@iconify/icons-twemoji/flag-for-flag-india";
 import laptopIcon from "@iconify/icons-twemoji/laptop";
 import paintbrushIcon from "@iconify/icons-twemoji/paintbrush";
+import { Icon } from "@iconify/react";
+import React from "react";
+
+import { Container, Intro, Name } from "./Styles";
 
 const Body: React.FC = (): JSX.Element => {
 	return (

@@ -1,7 +1,7 @@
-import React from "react";
 import axios from "axios";
+import React from "react";
+import { useEffect, useState } from "react";
 
-import { useState, useEffect } from "react";
 import MusicCard from "../ui/MusicCard/MusicCard";
 
 const NowPlaying: React.FC = (): JSX.Element => {
@@ -44,8 +44,11 @@ const NowPlaying: React.FC = (): JSX.Element => {
 		title: "Not Playing"
 	};
 
-	if (!nowPlayingInitialized) return <MusicCard track={placeHolder} />;
-	else return <MusicCard track={nowPlaying} />;
+	if (!nowPlayingInitialized) {
+		return <MusicCard track={placeHolder} />;
+	} else {
+		return <MusicCard track={nowPlaying} />;
+	}
 };
 
 export default NowPlaying;

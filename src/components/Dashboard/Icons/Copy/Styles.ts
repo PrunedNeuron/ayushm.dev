@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Copy } from "@styled-icons/boxicons-solid/Copy";
+import styled from "styled-components";
 
 export const CopyIcon = styled(Copy)`
 	height: 18px;

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { GetServerSideProps } from "next";
+import { Loading, Row } from "@zeit-ui/react";
 import axios from "axios";
-import { BASE_URL, API_KEY } from "../../../lib/constants";
-import Dashboard from "../../../components/Dashboard/Dashboard";
+import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
-import { Row, Loading } from "@zeit-ui/react";
+import React, { useEffect, useState } from "react";
+
+import Dashboard from "../../../components/Dashboard/Dashboard";
+import { API_KEY, BASE_URL } from "../../../lib/constants";
 import { IconRequest } from "../../../typings/types";
 
 type Props = {
@@ -27,11 +28,16 @@ const Requests: React.FC<Props> = ({
 	const router = useRouter();
 
 	useEffect(() => {
-		const signedInUser = localStorage.getItem("user");
-		if (signedInUser) {
-			setSignedIn(true);
-		} else router.push("/dashboard/login");
-	}, []);
+		if (typeof window !== "undefined") {
+			// eslint-disable-next-line no-undef
+			const signedInUser = localStorage.getItem("user");
+			if (signedInUser) {
+				setSignedIn(true);
+			} else {
+				router.push("/dashboard/login");
+			}
+		}
+	}, [router]);
 
 	if (signedIn) {
 		return (

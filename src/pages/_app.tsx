@@ -1,13 +1,15 @@
-import { AppProps } from "next/app";
 import "../../styles/global.css";
-import { ZeitProvider, CssBaseline } from "@zeit-ui/react";
-import Theme from "../themes/theme";
-import { useState } from "react";
+
+import { CssBaseline, ZeitProvider } from "@zeit-ui/react";
 import { PrismBaseline } from "@zeit-ui/react-prism";
-import React from "react";
-import ThemeContext from "../components/Contexts/ThemeContext";
 import { DefaultSeo } from "next-seo";
+import { AppProps } from "next/app";
+import { useState } from "react";
+import React from "react";
+
 import SEO from "../../next-seo.config";
+import ThemeContext from "../components/Contexts/ThemeContext";
+import Theme from "../themes/theme";
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
 	const [activeTheme, setActiveTheme] = useState("light");

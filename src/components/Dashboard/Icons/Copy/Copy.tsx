@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { CopyIcon } from "./Styles";
 import { Tooltip, useClipboard, useToasts } from "@zeit-ui/react";
+import React, { useState } from "react";
+
+import { CopyIcon } from "./Styles";
 
 interface Props {
 	component: string;

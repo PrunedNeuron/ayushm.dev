@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../Header/Header";
+
+import { Children } from "../../typings/types";
 import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
-interface Props {
-	children: React.ReactNode;
-}
-
-const PageLayout: React.FC<Props> = ({ children }: Props): JSX.Element => {
+const PageLayout: React.FC<Children> = ({
+	children
+}: Children): JSX.Element => {
 	return (
 		<>
 			<div className="wrapper">
@@ -28,9 +28,6 @@ const PageLayout: React.FC<Props> = ({ children }: Props): JSX.Element => {
 					flex-direction: column;
 					min-width: 100vw;
 					min-height: 100vh;
-					 {
-						/* margin: 0 2rem; */
-					}
 				}
 
 				main {

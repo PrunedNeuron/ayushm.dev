@@ -1,14 +1,15 @@
+import { MailOpen } from "@styled-icons/ionicons-solid/MailOpen";
+import { Card, Divider, Link, Text } from "@zeit-ui/react";
 import React from "react";
+
+import Heading from "../../ui/Heading/Heading";
+import Icon from "../../ui/Icon/Icon";
 import {
 	BodyContainer,
-	HeadingContainer,
+	CardContainer,
 	Cards,
-	CardContainer
+	HeadingContainer
 } from "./Styles";
-import { Text, Divider, Card, Link } from "@zeit-ui/react";
-import { MailOpen } from "@styled-icons/ionicons-solid/MailOpen";
-import Icon from "../../ui/Icon/Icon";
-import Heading from "../../ui/Heading/Heading";
 
 const ContactBody: React.FC = (): JSX.Element => {
 	return (

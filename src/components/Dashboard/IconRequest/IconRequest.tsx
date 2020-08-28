@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { Card, CardTitle, IconContainer } from "./Styles";
 import ClickToSelect from "@mapbox/react-click-to-select";
 import { Badge, Spacer, Tooltip, useToasts } from "@zeit-ui/react";
-import Code from "../../ui/Code/Code";
-import { CheckSolidIcon, CheckOutlineIcon } from "./Styles";
-import Layout from "../../Layouts/MotionLayout";
-import PlayStore from "../Icons/PlayStore/PlayStore";
-import Google from "../Icons/Google/Google";
-import Copy from "../Icons/Copy/Copy";
 import axios from "axios";
-import { BASE_URL, API_KEY } from "../../../lib/constants";
+import React, { useState } from "react";
+
+import { API_KEY, BASE_URL } from "../../../lib/constants";
+import Layout from "../../Layouts/MotionLayout";
+import Code from "../../ui/Code/Code";
+import Copy from "../Icons/Copy/Copy";
+import Google from "../Icons/Google/Google";
+import PlayStore from "../Icons/PlayStore/PlayStore";
+import { Card, CardTitle, IconContainer } from "./Styles";
+import { CheckOutlineIcon, CheckSolidIcon } from "./Styles";
 
 interface Props {
 	name: string;
@@ -24,7 +25,7 @@ const IconRequest: React.FC<Props> = (props: Props): JSX.Element => {
 	const [, setToast] = useToasts();
 
 	const updateRequestStatus = async () => {
-		const serverResponse = await axios({
+		return await axios({
 			method: "PUT",
 			url: BASE_URL + "/requests/update/component",
 			data: {
@@ -35,8 +36,6 @@ const IconRequest: React.FC<Props> = (props: Props): JSX.Element => {
 				"X-API-KEY": API_KEY
 			}
 		});
-
-		return serverResponse;
 	};
 
 	const doneClickHandler = async () => {

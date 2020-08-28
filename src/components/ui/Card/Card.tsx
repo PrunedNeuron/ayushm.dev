@@ -1,4 +1,5 @@
 import React from "react";
+
 import { CardContainer } from "./Styles";
 
 const Card: React.FC = (children: React.ReactNode): JSX.Element => {

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { DribbbleApi, DribbbleKeys } from "../../../utils/Constants";
-import axios from "axios";
-import { Img, ImageCard, Cards, ImageCardContainer } from "./Styles";
-import { Text, Loading } from "@zeit-ui/react";
-import Icon from "../../../ui/Icon/Icon";
-import { Dribbble } from "@styled-icons/remix-fill/Dribbble";
 import { ArrowRight } from "@styled-icons/heroicons-solid/ArrowRight";
+import { Dribbble } from "@styled-icons/remix-fill/Dribbble";
+import { Loading, Text } from "@zeit-ui/react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
+import Icon from "../../../ui/Icon/Icon";
+import { DribbbleApi, DribbbleKeys } from "../../../utils/Constants";
+import { Cards, ImageCard, ImageCardContainer, Img } from "./Styles";
+
+// eslint-disable-next-line sonarjs/cognitive-complexity
 const DesignProjects: React.FC = (): JSX.Element => {
 	const {
 		// DRIBBBLE_CLIENT_ID,
@@ -41,27 +43,35 @@ const DesignProjects: React.FC = (): JSX.Element => {
 					// console.log(response.data);
 					if (!didCancel) {
 						setShots(response.data);
-						if (isLoading) setIsLoading(false);
+						if (isLoading) {
+							setIsLoading(false);
+						}
 					}
 				}
 			} catch (error) {
 				console.warn(error.message);
 				if (!didCancel) {
-					if (isLoading) setIsLoading(false);
+					if (isLoading) {
+						setIsLoading(false);
+					}
 					setShotsFetched(true);
 					setIsError(true);
 				}
 			}
 		}
 
-		if (!shotsFetched && !didCancel) getShots();
+		if (!shotsFetched) {
+			getShots();
+		}
 
 		return () => {
 			didCancel = true;
 		};
-	}, [shots, page, isLoading, isError]);
+	}, [shots, page, isLoading, isError, shotsFetched, DRIBBBLE_ACCESS_TOKEN]);
 
-	if (isLoading) return <Loading size="large">Loading</Loading>;
+	if (isLoading) {
+		return <Loading size="large">Loading</Loading>;
+	}
 
 	return (
 		<>

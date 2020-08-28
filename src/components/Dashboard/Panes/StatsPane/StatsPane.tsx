@@ -1,6 +1,7 @@
-import React from "react";
 import { Progress, Spacer } from "@zeit-ui/react";
-import { ProgressContainer, Card, StatsPaneContainer } from "./Styles";
+import React from "react";
+
+import { Card, ProgressContainer, StatsPaneContainer } from "./Styles";
 
 interface Props {
 	iconRequests: {

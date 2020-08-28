@@ -1,15 +1,14 @@
-import React from "react";
-import { Text, Divider, Breadcrumbs } from "@zeit-ui/react";
-import { PostHeading, PostContent, PostContainer } from "./Styles";
-import { Home, FileText } from "@zeit-ui/react-icons";
+import { Breadcrumbs, Divider, Text } from "@zeit-ui/react";
+import { FileText, Home } from "@zeit-ui/react-icons";
 import Link from "next/link";
+import React from "react";
+
+import { PostContainer, PostContent, PostHeading } from "./Styles";
 
 interface Props {
 	frontMatter: FrontMatter;
-	content: any;
+	content: React.ReactNode;
 }
-
-// export default function BlogPost({ frontMatter, content })
 
 const BlogPost: React.FC<Props> = (props: Props): JSX.Element => {
 	return (

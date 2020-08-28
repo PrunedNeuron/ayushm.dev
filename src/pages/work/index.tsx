@@ -1,6 +1,7 @@
 import React from "react";
-import PageLayout from "../../components/Layouts/PageLayout";
+
 import Work from "../../components/Body/Work/Work";
+import PageLayout from "../../components/Layouts/PageLayout";
 
 const Index: React.FC = (): JSX.Element => {
 	return (

@@ -1,12 +1,13 @@
-import React from "react";
-import Icon from "../ui/Icon/Icon";
-import { FooterText, FooterContainer, FooterTextContainer } from "./Styles";
+import { Dribbble } from "@styled-icons/remix-fill/Dribbble";
+import { Github } from "@styled-icons/remix-fill/Github";
+import { LinkedinBox } from "@styled-icons/remix-fill/LinkedinBox";
 import { OpenSource } from "@styled-icons/remix-fill/OpenSource";
 import { Spotify } from "@styled-icons/remix-fill/Spotify";
-import { Dribbble } from "@styled-icons/remix-fill/Dribbble";
-import { LinkedinBox } from "@styled-icons/remix-fill/LinkedinBox";
-import { Github } from "@styled-icons/remix-fill/Github";
+import React from "react";
+
 import NowPlaying from "../NowPlaying/NowPlaying";
+import Icon from "../ui/Icon/Icon";
+import { FooterContainer, FooterText, FooterTextContainer } from "./Styles";
 
 const Footer: React.FC = (): JSX.Element => {
 	return (
@@ -47,6 +48,7 @@ const Footer: React.FC = (): JSX.Element => {
 						</Icon>{" "}
 						<Icon color="#33f289" size="24px" hoverable>
 							<a
+								// eslint-disable-next-line no-secrets/no-secrets
 								href="https://open.spotify.com/user/3gjvv8nvwtb8n5il2tu4fbxbx"
 								target="_blank"
 								rel="noopener noreferrer"

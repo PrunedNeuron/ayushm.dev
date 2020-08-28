@@ -1,8 +1,8 @@
+import { Page } from "@zeit-ui/react";
 import React from "react";
 
 import DashboardHeader from "./Header/DashboardHeader";
 import IconRequestsPane from "./Panes/IconRequestsPane/IconRequestsPane";
-import { Page } from "@zeit-ui/react";
 import StatsPane from "./Panes/StatsPane/StatsPane";
 import { DashboardContainer } from "./Styles";
 

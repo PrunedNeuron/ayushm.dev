@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Page, Spacer, Button } from "@zeit-ui/react";
-import { FormContainer, UsernameInput, PasswordInput } from "./Styles";
-import User from "@zeit-ui/react-icons/user";
-import Key from "@zeit-ui/react-icons/key";
-import { SignInText } from "./Styles";
+import { Button, Page, Spacer } from "@zeit-ui/react";
 import ChevronRight from "@zeit-ui/react-icons/chevronRight";
-import { BASE_URL } from "../../lib/constants";
+import Key from "@zeit-ui/react-icons/key";
+import User from "@zeit-ui/react-icons/user";
 import axios from "axios";
 import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+
+import { BASE_URL } from "../../lib/constants";
+import { FormContainer, PasswordInput, UsernameInput } from "./Styles";
+import { SignInText } from "./Styles";
 
 const SignIn: React.FC = (): JSX.Element => {
 	const [username, setUsername] = useState();
@@ -27,19 +28,19 @@ const SignIn: React.FC = (): JSX.Element => {
 		}
 	}, []);
 
-	const usernameInputHandler = (e) => {
-		setUsername(e.target.value);
+	const usernameInputHandler = (event) => {
+		setUsername(event.target.value);
 		// console.log(e.target.value);
 	};
 
-	const passwordInputHandler = (e) => {
-		setPassword(e.target.value);
+	const passwordInputHandler = (event) => {
+		setPassword(event.target.value);
 		// console.log(e.target.value);
 	};
 
-	const signInHandler = async (e) => {
-		e.preventDefault();
-		const serverResponse = await axios({
+	const signInHandler = async (event) => {
+		event.preventDefault();
+		return await axios({
 			method: "POST",
 			url: `${BASE_URL}/iconrequests/auth`,
 			data: {
@@ -49,22 +50,24 @@ const SignIn: React.FC = (): JSX.Element => {
 		})
 			.then((response) => response.data)
 			.then((response) => {
-				setSignedIn(response.status == "SUCCESS");
-				if (response.status == "SUCCESS") {
+				setSignedIn(response.status === "SUCCESS");
+				if (response.status === "SUCCESS") {
 					localStorage.setItem("user", response);
 				} else {
-					if (buttonStatus !== "error") setButtonStatus("error");
+					if (buttonStatus !== "error") {
+						setButtonStatus("error");
+					}
 				}
 			})
 			.catch((error) => {
 				console.log(error.message);
 				setSignedIn(false);
 			});
-
-		return serverResponse;
 	};
 
-	if (signedIn === true) router.push("/dashboard");
+	if (signedIn === true) {
+		router.push("/dashboard");
+	}
 
 	return (
 		<Page dotBackdrop render="effect-seo" size="small">

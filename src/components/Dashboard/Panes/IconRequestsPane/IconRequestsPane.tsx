@@ -1,16 +1,17 @@
-import React from "react";
+import { Pagination } from "@zeit-ui/react";
 import {
-	IconRequestsPaneContainer,
+	ChevronLeftCircleFill,
+	ChevronRightCircleFill
+} from "@zeit-ui/react-icons";
+import { useRouter } from "next/router";
+import React from "react";
+
+import IconRequests from "../../IconRequests/IconRequests";
+import {
 	IconRequestsContainer,
+	IconRequestsPaneContainer,
 	PaginationContainer
 } from "./Styles";
-import IconRequests from "../../IconRequests/IconRequests";
-import { Pagination } from "@zeit-ui/react";
-import { useRouter } from "next/router";
-import {
-	ChevronRightCircleFill,
-	ChevronLeftCircleFill
-} from "@zeit-ui/react-icons";
 
 interface Props {
 	iconRequests: {
@@ -46,7 +47,7 @@ const IconRequestsPane: React.FC<Props> = (props: Props): JSX.Element => {
 						doneCount={props.doneCount}
 					/>
 				</IconRequestsContainer>
-				{props.limit == 0 ? (
+				{props.limit === 0 ? (
 					<></>
 				) : (
 					<PaginationContainer>

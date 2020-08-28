@@ -1,13 +1,14 @@
-import React from "react";
-import {
-	SignOutButton,
-	LogoTextContainer,
-	LogoText,
-	HeaderContainer,
-	PillsIcon
-} from "./Styles";
+import { Divider, Page } from "@zeit-ui/react";
 import { LogOut } from "@zeit-ui/react-icons";
-import { Page, Divider } from "@zeit-ui/react";
+import React from "react";
+
+import {
+	HeaderContainer,
+	LogoText,
+	LogoTextContainer,
+	PillsIcon,
+	SignOutButton
+} from "./Styles";
 import { Greeting } from "./Styles";
 
 const DashboardHeader: React.FC = (): JSX.Element => {

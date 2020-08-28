@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Button } from "@zeit-ui/react";
 import { Pills } from "@styled-icons/fa-solid/Pills";
+import { Button } from "@zeit-ui/react";
+import styled from "styled-components";
 
 export const Greeting = styled.p`
 	float: left;

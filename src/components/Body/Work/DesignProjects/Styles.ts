@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Card } from "@zeit-ui/react";
+import styled from "styled-components";
 
 export const Img = styled.div<{ url: string }>`
 	background: url(${(props) => props.url}) no-repeat;

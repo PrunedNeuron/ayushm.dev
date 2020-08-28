@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 
 const Dashboard: React.FC = (): JSX.Element => {
 	const router = useRouter();
@@ -10,7 +10,7 @@ const Dashboard: React.FC = (): JSX.Element => {
 			`/dashboard/${limit}/${limit}`
 		);
 		router.push("/dashboard/[offset]/[limit]", `/dashboard/0/${limit}`);
-	}, []);
+	}, [router]);
 	return <div></div>;
 };
 

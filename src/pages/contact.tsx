@@ -1,6 +1,7 @@
 import React from "react";
-import PageLayout from "../components/Layouts/PageLayout";
+
 import ContactBody from "../components/Body/Contact/ContactBody";
+import PageLayout from "../components/Layouts/PageLayout";
 
 const Contact: React.FC = (): JSX.Element => {
 	return (

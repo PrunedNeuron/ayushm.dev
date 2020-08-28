@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import ChevronRight from "@zeit-ui/react-icons/chevronRight";
 import { Input } from "@zeit-ui/react";
+import ChevronRight from "@zeit-ui/react-icons/chevronRight";
+import styled from "styled-components";
 
 export const FormContainer = styled.form`
 	width: 300px;

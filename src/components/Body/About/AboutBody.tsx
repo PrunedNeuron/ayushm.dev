@@ -1,20 +1,21 @@
-import React from "react";
-import {
-	AboutContainer,
-	AboutBlock,
-	List,
-	ListItem,
-	Description
-} from "./Styles";
-import { Text, Divider, Link as ZeitLink } from "@zeit-ui/react";
-import Icon from "../../ui/Icon/Icon";
-import { ReactLogo } from "@styled-icons/simple-icons/ReactLogo";
+import artistPalette from "@iconify/icons-twemoji/artist-palette";
 import penIcon from "@iconify/icons-twemoji/pen";
 import { Icon as Iconify } from "@iconify/react";
-import Link from "next/link";
 import { Github } from "@styled-icons/remix-fill/Github";
-import artistPalette from "@iconify/icons-twemoji/artist-palette";
+import { ReactLogo } from "@styled-icons/simple-icons/ReactLogo";
 import { Typescript } from "@styled-icons/simple-icons/Typescript";
+import { Divider, Link as ZeitLink, Text } from "@zeit-ui/react";
+import Link from "next/link";
+import React from "react";
+
+import Icon from "../../ui/Icon/Icon";
+import {
+	AboutBlock,
+	AboutContainer,
+	Description,
+	List,
+	ListItem
+} from "./Styles";
 
 const AboutBody: React.FC = (): JSX.Element => {
 	return (

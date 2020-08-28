@@ -1,12 +1,13 @@
-import React from "react";
 import { Tooltip, useToasts } from "@zeit-ui/react";
-import { CheckSolidIcon, CheckOutlineIcon } from "./Styles";
+import React from "react";
+
+import { CheckOutlineIcon, CheckSolidIcon } from "./Styles";
 
 interface Props {
 	status: string;
 }
 
-const Check: React.FC<Props> = (props: Props): JSX.Element => {
+const Check: React.FC<Props> = (): JSX.Element => {
 	const [, setToast] = useToasts();
 
 	const doneClickHandler = () => {

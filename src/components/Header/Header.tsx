@@ -1,17 +1,18 @@
-import React, { useContext } from "react";
-import { Link as ZeitLink, Text, Button } from "@zeit-ui/react";
-import {
-	Links,
-	ThemeToggleButton,
-	HeadingContainer,
-	HeaderContainer
-} from "./Styles";
-import Link from "next/link";
-import { Sunny } from "@styled-icons/ionicons-solid/Sunny";
-import { Moon } from "@styled-icons/boxicons-solid/Moon";
-import ThemeContext from "../Contexts/ThemeContext";
-import { Icon as Iconify } from "@iconify/react";
 import supervillainIcon from "@iconify/icons-twemoji/supervillain";
+import { Icon as Iconify } from "@iconify/react";
+import { Moon } from "@styled-icons/boxicons-solid/Moon";
+import { Sunny } from "@styled-icons/ionicons-solid/Sunny";
+import { Button, Link as ZeitLink, Text } from "@zeit-ui/react";
+import Link from "next/link";
+import React, { useContext } from "react";
+
+import ThemeContext from "../Contexts/ThemeContext";
+import {
+	HeaderContainer,
+	HeadingContainer,
+	Links,
+	ThemeToggleButton
+} from "./Styles";
 import { HeaderName } from "./Styles";
 
 const Header: React.FC = (): JSX.Element => {
@@ -30,7 +31,7 @@ const Header: React.FC = (): JSX.Element => {
 						size="small"
 						type="abort"
 						icon={
-							theme.activeTheme == "dark" ? <Sunny /> : <Moon />
+							theme.activeTheme === "dark" ? <Sunny /> : <Moon />
 						}
 						onClick={theme.toggleTheme}
 						auto
@@ -39,7 +40,7 @@ const Header: React.FC = (): JSX.Element => {
 				<HeadingContainer className="headingContainer">
 					<Text size="1.5rem">
 						<Link href="/">
-							<a className="plainLink">
+							<a href="#" className="plainLink">
 								<Text h4 style={{ fontWeight: 300 }}>
 									<Iconify icon={supervillainIcon} />
 									<HeaderName className="headingName">
