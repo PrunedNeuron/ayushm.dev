@@ -3,6 +3,7 @@
 	"parserOptions": {
 		"ecmaVersion": 2020,
 		"sourceType": "module",
+		"project": "./tsconfig.json",
 		"ecmaFeatures": {
 			"jsx": true
 		}
@@ -12,13 +13,35 @@
 			"version": "detect"
 		}
 	},
+	"plugins": ["@typescript-eslint", "react", "react-hooks", "sonarjs", "no-secrets", "security", "simple-import-sort", "json-format", "xss", "no-unsanitized"],
 	"extends": [
-		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:react/recommended",
+		"plugin:sonarjs/recommended",
+		"plugin:prettier/recommended",
+		"plugin:security/recommended",
+		"plugin:no-unsanitized/DOM",
+		"plugin:regexp/recommended",
+		"eslint:recommended",
 		"prettier/@typescript-eslint",
-		"plugin:prettier/recommended"
+		"prettier"
 	],
 	"rules": {
-		"no-empty-function": "warn"
+		"no-undef": "off",
+		"no-empty-function": "warn",
+		"no-secrets/no-secrets": "error",
+		"simple-import-sort/sort": "error",
+		"@typescript-eslint/semi": "warn",
+		"curly": "warn",
+		"eqeqeq": "warn",
+		"no-throw-literal": "warn",
+		"semi": "off",
+		"sort-imports": "off",
+		"import/order": "off",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"xss/no-location-href-assign": "warn",
+		"xss/no-mixed-html": "warn"
 	}
 }
