@@ -39,4 +39,4 @@ jobs:
                   script_stop: true
                   script: |
                       cd ${{ secrets.SITE_PATH }}
-                      yarn prepare && yarn deploy
+                      yarn prep && yarn deploy
