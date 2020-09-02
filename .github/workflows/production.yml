@@ -25,5 +25,5 @@ jobs:
                   script_stop: true
                   script: |
                       cd ${{ secrets.SITE_PATH }}
-                      pwd
-                      #yarn prep && yarn deploy
+                      yarn prep
+                      yarn deploy
