@@ -1,0 +1,42 @@
+name: Node.js CI
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [10.x, 12.x, 14.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Setup Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2-beta
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: yarn
+            - run: yarn build
+
+    deploy:
+        name: Publish website
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: SSH into server
+              uses: appleboy/scp-action@master
+              env:
+                  host: ${{ secrets.HOST_NAME }}
+                  username: ${{ secrets.USER_NAME }}
+                  key: ${{ secrets.SSH_KEY }}
+                  port: ${{ secrets.PORT }}
+                  script_stop: true
+                  script: |
+                      cd /home/ayush/core/website
+                      yarn prepare && yarn deploy
