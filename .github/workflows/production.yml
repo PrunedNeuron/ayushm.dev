@@ -35,7 +35,7 @@ jobs:
                   host: ${{ secrets.HOST_NAME }}
                   username: ${{ secrets.USER_NAME }}
                   key: ${{ secrets.SSH_KEY }}
-                  passphrase: ${{ secrets.PASSPHRASE }}
+                  passphrase: ""
                   port: ${{ secrets.PORT }}
                   script_stop: true
                   script: |
