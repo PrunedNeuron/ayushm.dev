@@ -35,8 +35,9 @@ jobs:
                   host: ${{ secrets.HOST_NAME }}
                   username: ${{ secrets.USER_NAME }}
                   key: ${{ secrets.SSH_KEY }}
+                  passphrase: ${{ secrets.PASSPHRASE }}
                   port: ${{ secrets.PORT }}
                   script_stop: true
-                  script: ls
-                      #cd ${{ secrets.SITE_PATH }}
-                      #yarn prep && yarn deploy
+                  script: |
+                      cd ${{ secrets.SITE_PATH }}
+                      yarn prep && yarn deploy
