@@ -37,6 +37,6 @@ jobs:
                   key: ${{ secrets.SSH_KEY }}
                   port: ${{ secrets.PORT }}
                   script_stop: true
-                  script: |
-                      cd ${{ secrets.SITE_PATH }}
-                      yarn prep && yarn deploy
+                  script: ls
+                      #cd ${{ secrets.SITE_PATH }}
+                      #yarn prep && yarn deploy
