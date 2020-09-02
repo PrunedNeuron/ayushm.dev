@@ -21,6 +21,7 @@ jobs:
                   key: ${{ secrets.SSH_KEY }}
                   passphrase: ""
                   port: ${{ secrets.PORT }}
+                  debug: true
                   script_stop: true
                   script: |
                       cd ${{ secrets.SITE_PATH }}
