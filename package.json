@@ -13,7 +13,7 @@
 		"dev": "next -p 3001",
 		"build": "next build",
 		"start": "next start -p 3001",
-		"prep:server": "cross-env NODE_ENV=development yarn && yarn build",
+		"prep": "git pull origin master && cross-env NODE_ENV=development yarn && yarn build",
 		"deploy": "pm2 restart ecosystem.yml --update-env"
 	},
 	"dependencies": {
