@@ -24,5 +24,6 @@ jobs:
                   script_stop: true
                   script: |
                       cd ${{ secrets.SITE_PATH }}
+                      nvm use 12.18.0
                       yarn prep
                       yarn deploy
