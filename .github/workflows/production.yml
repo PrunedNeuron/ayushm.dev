@@ -61,7 +61,7 @@ jobs:
 
     deploy:
         name: Publish website
-        #needs: build
+        needs: build
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
